@@ -4,7 +4,7 @@
 	margin: 0;
 }
 
-html, body {
+html, body, .floof {
 	margin: 0;
 	height: 100%;
 
@@ -15,7 +15,7 @@ html, body {
 			rgba(34, 34, 34, 0.77),
 			rgba(9, 7, 12, 0.76)
 		),
-		url(/content/noise-25-percent.png)
+		url(/assets/noise-25-percent.png)
 	);
 }
 
@@ -82,7 +82,7 @@ header.main {
 			height: 440px;
 			position: relative;
 			margin: -81px auto auto 20px;
-			background: url(/content/logo-ribbon.png);
+			background: url(/assets/logo-ribbon.png);
 		}
 
 		.homepage-slider {
