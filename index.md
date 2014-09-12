@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <html>
@@ -20,7 +22,7 @@
 			<div class="logo-ribbon"></div>
 			<div class="homepage-slider">
 				<div class="canvas" data-bind="">
-
+					
 				</div>
 			</div>
 		</div>
