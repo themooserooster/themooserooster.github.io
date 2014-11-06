@@ -11,19 +11,31 @@ body {
 	display: flex;
 	flex-direction: column;
 	margin: 0;
-	height: 100vh;
+	min-height: 100vh;
 	font-family: sans-serif;
-	overflow-y: scroll; 
+	background: transparent; 
 
-	@include background-image(
-		radial-gradient(
-			ellipse farthest-corner,
-			rgba(71, 71, 71, 0.83), 
-			rgba(34, 34, 34, 0.77),
-			rgba(9, 7, 12, 0.76)
-		),
-		url(/assets/noise-25-percent.png)
-	);
+	&:after {
+		position: fixed;
+		height: 100vh;
+		width: 100%;
+		content: "";
+		top: 0;
+		left: 0;
+		z-index: -1;
+
+		@include background-image(
+			radial-gradient(
+				ellipse farthest-corner,
+				rgba(71, 71, 71, 0.83), 
+				rgba(34, 34, 34, 0.77),
+				rgba(9, 7, 12, 0.76)
+			),
+			url(/assets/noise-25-percent.png)
+		);	
+	}
+
+	
 }
 
 header {
@@ -88,17 +100,20 @@ header {
 	}
 }
 
-.masthead {
-	min-height: 300px;
-	max-width: 1265px;
+.windowpane {
 	background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.5);
-	width: 85%;
-	margin: 50px auto;
-	padding: 0px 30px;
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.65);
 	border-radius: 15px;
 	border-top: 1px solid rgba(255, 255, 255, 0.5);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.65);
+}
+
+.masthead {
+	min-height: 300px;
+	max-width: 1265px;
+	width: 85%;
+	margin: 50px auto;
+	padding: 0px 30px;
 }
 
 main {
@@ -106,13 +121,17 @@ main {
 	width: 85%;
 	max-width: 1265px;
 	flex: 1;
-	margin: 0 auto 0px;
+	margin: 0px auto 50px;
 
 	p {
 		font-size: 20px;
+		margin-bottom: 10px;
 	}
 }
 
 footer {
-
+	width: 85%;
+	max-width: 1265px;
+	margin: 0px auto 20px;
+	color: #f0f0f0;
 }
