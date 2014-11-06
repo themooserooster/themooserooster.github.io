@@ -1,12 +1,19 @@
-@import 'bourbon/bourbon';
+---
+---
+
+@import 'bourbon/_bourbon';
 
 * {
 	margin: 0;
 }
 
-html, body, .floof {
+body {
+	display: flex;
+	flex-direction: column;
 	margin: 0;
-	height: 100%;
+	height: 100vh;
+	font-family: sans-serif;
+	overflow-y: scroll; 
 
 	@include background-image(
 		radial-gradient(
@@ -19,11 +26,9 @@ html, body, .floof {
 	);
 }
 
-header.main {
-
-	height: 60px;
+header {
+	height: 200px;
 	background-color: #000;
-	position: relative;
 	border-bottom: 5px solid #555555;
 	z-index: 1000;
 	box-shadow: 10px 0px 20px #000;
@@ -31,16 +36,40 @@ header.main {
 		linear-gradient(#414141, #1F1F1F)
 	);
 
+	.logo-ribbon {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.logo-ribbon {
+		display: block;
+		margin-top: -80px;
+		flex-shrink: 0;
+	}
+
 	nav {
-		width: 620px;
-		height: 100%;
+		display: flex;
+		width: 85%;
+		max-width: 1265px;
 		margin: 0px auto;
-		padding: 10px 0px 0px;
 		font-family: Calibri, sans-serif;
 		font-size: 30px;
-		text-align: justify;
+		text-align: center;
 
-		a {
+		ul {
+			display: flex;
+			margin-top: 90px;
+			flex-grow: 1;
+			padding: 0;
+		}
+
+		li {
+			display: block;
+			flex-grow: 1;
+			letter-spacing: 3px;
+		}
+
+		a, a:visited {
 			text-decoration: none;
 			color: #ddd;
 			text-shadow: 0px 0px 20px #AAA;
@@ -56,53 +85,34 @@ header.main {
     			height: 0;
 			}
 		}
-
-		&::after {
-			width: 100%;
-			content: '';
-		}
-	}
-
-}
-
-#content {
-	
-	width: 100%;
-	min-height: 100%;
-	height: auto !important;
-	margin: 0 auto -4em;
-
-	.main-column {
-		width: 960px; // grid system, bitches!!
-		margin: 0px auto;
-		position: relative;
-
-		.logo-ribbon {
-			width: 230px;
-			height: 440px;
-			position: relative;
-			margin: -81px auto auto 20px;
-			background: url(/assets/logo-ribbon.png);
-		}
-
-		.homepage-slider {
-			margin: -335px 50px;
-			
-			.canvas {
-				width: 860px;
-				height: 450px;
-				background: rgba(17, 17, 17, .60);
-				border-radius: 15px;
-				border-top: 1px solid #666;
-				border-bottom: 1px solid #333;
-				box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
-			}
-
-		}
 	}
 }
 
-.footer, .push {
-	height: 4em;
-	background: transparent;
+.masthead {
+	min-height: 300px;
+	max-width: 1265px;
+	background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.5);
+	width: 85%;
+	margin: 50px auto;
+	padding: 0px 30px;
+	border-radius: 15px;
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.65);
+}
+
+main {
+	color: #f0f0f0;
+	width: 85%;
+	max-width: 1265px;
+	flex: 1;
+	margin: 0 auto 0px;
+
+	p {
+		font-size: 20px;
+	}
+}
+
+footer {
+
 }

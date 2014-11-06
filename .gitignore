@@ -1,3 +1,5 @@
 _site/
 node_modules/
 /.c9
+*.sublime-project
+*.sublime-workspace
