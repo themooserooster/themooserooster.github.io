@@ -13,12 +13,12 @@ body {
 	margin: 0;
 	min-height: 100vh;
 	font-family: sans-serif;
-	background: transparent; 
+	background: transparent;
 
 	&:after {
 		position: fixed;
 		height: 100vh;
-		width: 100%;
+		width: 100vw;
 		content: "";
 		top: 0;
 		left: 0;
@@ -27,15 +27,15 @@ body {
 		@include background-image(
 			radial-gradient(
 				ellipse farthest-corner,
-				rgba(71, 71, 71, 0.83), 
+				rgba(71, 71, 71, 0.83),
 				rgba(34, 34, 34, 0.77),
 				rgba(9, 7, 12, 0.76)
 			),
 			url(/assets/noise-25-percent.png)
-		);	
+		);
 	}
 
-	
+
 }
 
 header {
@@ -114,24 +114,88 @@ header {
 	width: 85%;
 	margin: 50px auto;
 	padding: 0px 30px;
+	text-align: center;
+	font-family: Montserrat, sans-serif;
+
+	h2 {
+		margin-top: 30px;
+		color: #f0f0f0;
+		font-size: 8em;
+	}
+
+	h3 {
+		color: #C95337;
+		font-size: 4em;
+	}
+
 }
 
 main {
 	color: #f0f0f0;
 	width: 85%;
 	max-width: 1265px;
-	flex: 1;
+	flex-grow: 1;
 	margin: 0px auto 50px;
 
 	p {
 		font-size: 20px;
 		margin-bottom: 10px;
 	}
+
+	&.avoid-ribbon {
+		margin-top: 50px;
+
+		p:first-of-type:first-line {
+			font-weight: bold;
+			font-size: 1.2em;
+		}
+
+		&:before {
+			content: "";
+			display: block;
+			float: left;
+			width: 240px;
+			height: 100px;
+			//background: red;
+		}
+	}
+
 }
 
 footer {
-	width: 85%;
-	max-width: 1265px;
-	margin: 0px auto 20px;
-	color: #f0f0f0;
+	width: 100%;
+	margin: 0px auto 0px;
+	color: #808080;
+	min-height: 30px;
+	background-color: #000;
+	border-top: 5px solid #555555;
+	z-index: 1000;
+	box-shadow: -10px 0px 20px #000;
+	padding: 15px 0px 0px;
+
+ 	.container {
+		margin-top: 20px;
+		width: 85%;
+		max-width: 1265px;
+		margin: 0px auto;
+		display: flex;
+
+		.panel {
+			flex-grow: 1;
+			margin: 0px 1%;
+
+			a, a:visited {
+				color: #C95337;
+				text-decoration: none;
+				font-weight: 700;
+			}
+		}
+
+	}
+
+	.license {
+		margin: 20px auto;
+		width: 85%;
+		max-width: 1265px;
+	}
 }
