@@ -6,7 +6,7 @@ permalink: /tutorials/
 
 <div class="home">
 
-<h1>Tutorials</h1>
+<h1>//&nbsp;Tutorials</h1>
 
 <ul class="tutorials">
 {% for post in site.tutorials %}
