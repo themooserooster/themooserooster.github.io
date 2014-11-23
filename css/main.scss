@@ -44,9 +44,7 @@ header {
 	border-bottom: 5px solid #555555;
 	z-index: 1000;
 	box-shadow: 10px 0px 20px #000;
-	@include background-image(
-		linear-gradient(#414141, #1F1F1F)
-	);
+	@include background-image(linear-gradient(#414141, #1F1F1F));
 
 	.logo-ribbon {
 		display: inline-block;
@@ -57,6 +55,7 @@ header {
 		display: block;
 		margin-top: -80px;
 		flex-shrink: 0;
+		height: 440px;
 	}
 
 	nav {
@@ -67,12 +66,14 @@ header {
 		font-family: Calibri, sans-serif;
 		font-size: 30px;
 		text-align: center;
+		max-height: 200px;
 
 		ul {
 			display: flex;
 			margin-top: 90px;
 			flex-grow: 1;
 			padding: 0;
+			max-height: 40px;
 		}
 
 		li {
@@ -98,6 +99,15 @@ header {
 			}
 		}
 	}
+}
+
+h1 {
+	font-size: 7em;
+	margin: -50px 0px 50px;
+}
+
+a, a:visited {
+	color: #C95337;
 }
 
 .windowpane {
@@ -197,5 +207,19 @@ footer {
 		margin: 20px auto;
 		width: 85%;
 		max-width: 1265px;
+	}
+}
+
+// MISC
+
+// clearfix:
+.cf {
+	&:before, &:after {
+		content: " "; /* 1 */
+		display: table; /* 2 */
+	}
+	
+	&:after {
+		clear: both;
 	}
 }

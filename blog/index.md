@@ -1,16 +1,19 @@
 ---
 layout: default
+styles: |
+    <link rel="stylesheet" type="text/css" href="/css/blog.css">
 ---
 
 <div class="home">
 
-  <h1>Posts</h1>
+  <h1>//&nbsp;Blog</h1>
 
   <ul class="posts">
     {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      <li class="windowpane">
+        <p class="link"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></p>
+        <p class="date">{{ post.date | date: "%b %-d, %Y" }}</p>
+
       </li>
     {% endfor %}
   </ul>
