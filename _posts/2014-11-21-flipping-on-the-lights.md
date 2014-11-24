@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 title:  "Flipping on the lights!"
 date:   2014-11-21 17:26:36
 categories: update

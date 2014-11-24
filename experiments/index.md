@@ -1,11 +1,11 @@
 ---
-layout: default
+layout: experimentsindex
 permalink: /experiments/
 ---
 
 <div class="home">
 
-<h1>//&nbsp;Experiments</h1>
+
 
 <ul class="experiments">
 {% for post in site.experiments %}
@@ -16,6 +16,5 @@ permalink: /experiments/
 {% endfor %}
 </ul>
 
-<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>

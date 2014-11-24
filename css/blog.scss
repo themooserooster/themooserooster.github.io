@@ -7,9 +7,17 @@
 
     li {
         display: inline-block;
-        min-width: 450px;
+        width: 45%;
         padding: 10px 20px;
-        margin: 0px 30px 25px 0px;
+        margin-bottom: 25px;
+
+        &:nth-child(odd) {
+            margin-right: 2.5%;
+        }
+
+        &:nth-child(even) {
+            margin-left: -5px;
+        }
     }
 
     .link {

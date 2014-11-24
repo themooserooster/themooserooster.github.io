@@ -1,5 +1,5 @@
 ---
-layout: tutorial
+layout: tutorials
 title: Intro to Jekyll - Part 1
 date: 2014-11-21
 ---
