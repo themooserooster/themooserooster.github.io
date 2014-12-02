@@ -4,9 +4,6 @@ title: Intro to Jekyll - Part 1
 date: 2014-11-21
 ---
 
-Custom Jekyll Layouts - Part 1
-==============================
-
 Lesson plan for creating custom layouts with Jekyll
 
 tags we'll use:

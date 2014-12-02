@@ -5,10 +5,10 @@ permalink: /experiments/
 ---
 
 <ul class="experiments">
-    {% for post in site.experiments %}
+    {% for experiment in site.experiments reversed %}
     <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <span class="experiment-date">{{ experiment.date | date: "%b %-d, %Y" }}</span>
+        <a class="experiment-link" href="{{ experiment.url | prepend: site.baseurl }}">{{ experiment.title }}</a>
     </li>
     {% endfor %}
 </ul>

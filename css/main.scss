@@ -110,13 +110,15 @@ a, a:visited {
 	color: #C95337;
 }
 
-.windowpane {
+@mixin windowpane {
 	background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.5);
 	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.65);
 	border-radius: 15px;
 	border-top: 1px solid rgba(255, 255, 255, 0.5);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+.windowpane { @include windowpane; }
 
 .masthead {
 	min-height: 300px;
@@ -218,8 +220,17 @@ footer {
 		content: " "; /* 1 */
 		display: table; /* 2 */
 	}
-	
+
 	&:after {
 		clear: both;
 	}
+}
+
+// code coloring:
+
+pre {
+	@include windowpane;
+	padding: 15px;
+	margin: 20px 0px;
+	font-size: 20px;
 }

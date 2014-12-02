@@ -6,10 +6,10 @@ styles: |
 ---
 
 <ul class="tutorials">
-    {% for post in site.tutorials %}
+    {% for tutorial in site.tutorials reversed %}
     <li class="windowpane">
-        <p><a class="link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></p>
-        <p class="date">{{ post.date | date: "%b %-d, %Y" }}</p>
+        <p><a class="link" href="{{ tutorial.url | prepend: site.baseurl }}">{{ tutorial.title }}</a></p>
+        <p class="date">{{ tutorial.date | date: "%b %-d, %Y" }}</p>
     </li>
     {% endfor %}
 </ul>
