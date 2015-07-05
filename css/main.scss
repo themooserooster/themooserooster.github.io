@@ -152,6 +152,10 @@ main {
 	p {
 		font-size: 20px;
 		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
 	}
 
 	&.avoid-ribbon {
@@ -224,6 +228,15 @@ footer {
 	&:after {
 		clear: both;
 	}
+}
+
+ul{
+	padding: 0px;
+}
+
+li {
+	list-style: none;
+
 }
 
 // code coloring:

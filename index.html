@@ -2,23 +2,25 @@
 layout: homepage
 title: Home
 ---
-<h2>&nbsp;//&nbsp;Blog</h2>
-<ul class="posts">
-	{% for post in site.posts limit:3 %}
-	<li class="windowpane">
-		<p class="link"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></p>
-		<p class="date">{{ post.date | date: "%b %-d, %Y" }}</p>
+<section class="recent-content">
+	<h2>&nbsp;//&nbsp;Blog</h2>
+	<ul class="posts">
+		{% for post in site.posts limit:3 %}
+		<li class="windowpane">
+			<p class="link"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></p>
+			<p class="date">{{ post.date | date: "%b %-d, %Y" }}</p>
 
-	</li>
-	{% endfor %}
-</ul>
+		</li>
+		{% endfor %}
+	</ul>
 
-<h2>&nbsp;//&nbsp;Tutorials</h2>
-<ul class="tutorials">
-	{% for tutorial in site.tutorials reversed limit:3 %}
-	<li class="windowpane">
-		<p><a class="link" href="{{ tutorial.url | prepend: site.baseurl }}">{{ tutorial.title }}</a></p>
-		<p class="date">{{ tutorial.date | date: "%b %-d, %Y" }}</p>
-	</li>
-	{% endfor %}
-</ul>
+	<h2>&nbsp;//&nbsp;Tutorials</h2>
+	<ul class="tutorials">
+		{% for tutorial in site.tutorials reversed limit:3 %}
+		<li class="windowpane">
+			<p><a class="link" href="{{ tutorial.url | prepend: site.baseurl }}">{{ tutorial.title }}</a></p>
+			<p class="date">{{ tutorial.date | date: "%b %-d, %Y" }}</p>
+		</li>
+		{% endfor %}
+	</ul>
+</section>
