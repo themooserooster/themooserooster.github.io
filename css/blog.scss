@@ -28,3 +28,17 @@
 
     }
 }
+
+.post-content {
+    box-sizing: content-box;
+    padding: 20px 20px 40px;
+
+    h2 {
+        font-size: 1.8em;
+        color: #C95337; 
+    }
+
+    .meta {
+        margin-bottom: 25px;
+    }
+}
