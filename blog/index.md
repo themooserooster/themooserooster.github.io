@@ -3,7 +3,6 @@ layout: blogindex
 title: Blog
 ---
 
-
 <ul class="posts">
 {% for post in site.posts %}
   <li class="windowpane">

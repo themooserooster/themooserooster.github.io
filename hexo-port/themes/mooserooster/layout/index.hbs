@@ -1,0 +1,25 @@
+---
+title: Home
+---
+<section class="recent-content">
+	<h2>&nbsp;//&nbsp;Blog</h2>
+	<ul class="posts">
+		{{#each site.posts }}
+		<li class="windowpane">
+			<p class="link"><a href="{{site.baseurl}}/{{post.url}}">{{ post.title }}</a></p>
+			<p class="date">{{ post.date }}</p>
+
+		</li>
+        {{/each}}
+	</ul>
+
+	<h2>&nbsp;//&nbsp;Tutorials</h2>
+	<ul class="tutorials">
+        {{#each site.tutorials }}
+		<li class="windowpane">
+			<p><a class="link" href="{{site.baseurl}}/{{url}}">{{ title }}</a></p>
+			<p class="date">{{ date }}</p>
+		</li>
+        {{/each}}
+	</ul>
+</section>
