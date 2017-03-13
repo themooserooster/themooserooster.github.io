@@ -1,7 +1,5 @@
----
-layout: blog
 title:  "Test Blog Post 2"
-date:   2014-11-19
+date:   2017-03-11
 categories: update
 ---
 

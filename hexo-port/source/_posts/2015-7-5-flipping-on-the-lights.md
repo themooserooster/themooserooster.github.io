@@ -1,4 +1,3 @@
----
 layout: blogpost
 title:  "Flipping on the lights!"
 date:   2015-7-5

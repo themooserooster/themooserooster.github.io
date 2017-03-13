@@ -1,4 +1,4 @@
-@import 'bourbon/_bourbon';
+// @import 'bourbon/_bourbon';
 
 * {
 	margin: 0;
@@ -21,7 +21,7 @@ body {
 		left: 0;
 		z-index: -1;
 
-		@include background-image(
+		background-image:
 			radial-gradient(
 				ellipse farthest-corner,
 				rgba(71, 71, 71, 0.83),
@@ -29,7 +29,7 @@ body {
 				rgba(9, 7, 12, 0.76)
 			),
 			url(/assets/noise-25-percent.png)
-		);
+		;
 	}
 
 
@@ -41,7 +41,7 @@ header {
 	border-bottom: 5px solid #555555;
 	z-index: 1000;
 	box-shadow: 10px 0px 20px #000;
-	@include background-image(linear-gradient(#414141, #1F1F1F));
+	background-image: linear-gradient(#414141, #1F1F1F);
 
 	.logo-ribbon {
 		display: inline-block;
