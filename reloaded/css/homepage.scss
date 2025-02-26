@@ -1,0 +1,29 @@
+---
+---
+
+.recent-content {
+    h2 {
+        margin: 25px 0px 10px;
+    }
+}
+
+.posts, .tutorials {
+
+    li {
+        box-sizing: border-box;
+        padding: 10px 15px;
+        margin: 10px 0px;
+
+        p {
+            font-size: 1.4em;
+        }
+    }
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

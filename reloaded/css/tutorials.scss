@@ -1,0 +1,30 @@
+---
+---
+
+.tutorials {
+    padding: 0px;
+    margin-bottom: 50px;
+
+    li {
+        display: inline-block;
+        width: 45%;
+        padding: 10px 20px;
+        margin-bottom: 25px;
+
+        &:nth-child(odd) {
+            margin-right: 2.5%;
+        }
+
+        &:nth-child(even) {
+            margin-left: -5px;
+        }
+    }
+
+    .link {
+
+    }
+
+    .date {
+
+    }
+}

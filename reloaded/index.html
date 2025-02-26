@@ -1,0 +1,16 @@
+---
+layout: homepage
+title: Home
+---
+<section class="recent-content">
+	<h2>&nbsp;//&nbsp;Posts</h2>
+	<ul class="posts">
+		{% for post in site.posts limit:3 %}
+		<li class="windowpane">
+			<p class="link"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></p>
+			<p class="date">{{ post.date | date: "%b %-d, %Y" }}</p>
+
+		</li>
+		{% endfor %}
+	</ul>
+</section>
